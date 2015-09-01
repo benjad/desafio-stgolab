@@ -1,0 +1,46 @@
+doctype html
+html
+  head
+    title santiago lab
+    link(rel='stylesheet', href='stylesheets/style.css')
+    script(type='text/javascript' src='javascripts/script.js')
+  body
+     header
+      img(id='logo' src= "/images/logo.png")
+    .container
+      hr
+
+
+      #form
+            form(id='submit-form', onsubmit='return validateForm()',  name='myform')
+                .form-group
+                  label(for='email') Ingresa tu email
+                  input(type='text', name='email', class='form-control', id='username', placeholder='email')
+                .form-group
+                  label(for='color') Elige un color
+                  .radio
+                    label(style='color: greenyellow')
+                      input(type='radio', name='color', class='radio' ) 
+                      |Verde
+                  .radio
+                    label(style='color: blue')
+                      input(type='radio', name='color', class='radio' ) 
+                      |Azul
+                .form-group
+                   label(for='numero') Elige un numero 
+                    select(name='numero')
+                     option(value='') 
+                     option(value='1') 1
+                     option(value='2') 2
+                     option(value='3') 3
+                .form-group
+                  button.btn.btn-default(type='submit' form='submit-form' ) Enviar
+
+      .col-md-6.col-md-offset-3
+          #message( class='alert alert-danger hide') 
+      .col-md-6.col-md-offset-3
+          #success( class='alert alert-success hide') 
+            
+           
+       
+   
